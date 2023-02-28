@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - ./connx:/connx
+    command: >
+      bash -c "echo 'Hello, Connx!!'; \
+                     echo 'To install Connx, please run this command:'; \
+                     echo 'docker-compose run --rm app bash -c \"git clone https://github.com/tsnlab/connx.git . \"';"
+
+
