@@ -5,10 +5,8 @@ services:
     build:
       context: .
     volumes:
-      - ./connx:/connx
+      - ./app:/app
     command: >
-      bash -c "echo 'Hello, Connx!!'; \
-                     echo 'To install Connx, please run this command:'; \
-                     echo 'docker-compose run --rm app bash -c \"git clone https://github.com/tsnlab/connx.git . \"';"
+      bash -c "cp /tmp/container_install.sh /app/install.sh && git clone https://github.com/tsnlab/connx.git" 
 
 
