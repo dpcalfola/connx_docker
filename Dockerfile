@@ -1,4 +1,4 @@
-FROM ubuntu:jammy-20230126
+FROM python:3.10.10-slim-buster
 
 MAINTAINER FolaFlor
 LABEL maintainer="https://dpcalfola.tistory.com/"
@@ -11,10 +11,9 @@ COPY copy_files/container_install.sh /tmp/container_install.sh
 WORKDIR /app
 
 # Install sudo
-RUN apt-get update && apt-get install -y sudo
+RUN apt update && apt install -y sudo
 
 # Install python and dependencies
-RUN sudo apt -y install python3 python3.10-venv python3-pip
 RUN sudo apt -y install git cmake ninja-build
 
 # Create virtual environment

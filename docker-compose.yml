@@ -6,7 +6,9 @@ services:
       context: .
     volumes:
       - ./app:/app
+#    command: >
+#      bash -c "cp /tmp/container_install.sh /app/install.sh && git clone https://github.com/tsnlab/connx.git"
     command: >
-      bash -c "cp /tmp/container_install.sh /app/install.sh && git clone https://github.com/tsnlab/connx.git" 
-
+      bash -c "cp /tmp/container_install.sh /app/install.sh"
+      
 

@@ -1,7 +1,5 @@
-#!/bin/bash
-
-## Clone connx from github
-#git clone https://github.com/tsnlab/connx.git
+# Activate virtualenv
+source /py/bin/activate
 
 # Install connx
 cd connx && poetry install -E numpy
